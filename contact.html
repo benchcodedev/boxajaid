@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hubungi Kami — boxaja.id | Konsultasi Cetak Kemasan WhatsApp 0811-2886-2016</title>
+  
+  <meta name="description" content="Hubungi boxaja.id untuk konsultasi cetak Box Packaging, Paper Bag, Brosur, Kalender via WhatsApp 0811-2886-2016 atau kunjungi workshop pabrik kami.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23141416'/><path d='M28 36L50 24L72 36L50 48L28 36Z' fill='%23FFFFFF'/><path d='M28 42L50 54V76L28 64V42Z' fill='%23D4D4D8'/><path d='M72 42L50 54V76L72 64V42Z' fill='%23A1A1AA'/></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .contact-info-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item {
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      margin-bottom: 12px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .faq-item:hover {
+      border-color: rgba(0,0,0,0.2);
+    }
+    .faq-q {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-a {
+      font-size: 13.5px;
+      color: var(--text-muted);
+      margin-top: 10px;
+      line-height: 1.6;
+      display: none;
+    }
+    .faq-item.active .faq-a {
+      display: block;
+    }
+    .faq-item.active .faq-toggle-icon {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       Header (Navbar)
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="site-container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="site-logo" title="boxaja.id">
+          <div class="logo-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <span>boxaja<span class="logo-id">.id</span></span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="https://wa.me/6281128862016?text=Halo%20boxaja.id,%20saya%20ingin%20konsultasi%20cetak%20kemasan." target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-outline">
+            <span>Get Started</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+
+          <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <ul class="mobile-drawer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products & Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="pricing.html">Pricing Calculator</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 24px;">
+      <a href="https://wa.me/6281128862016?text=Halo%20boxaja.id,%20saya%20ingin%20konsultasi%20cetak%20kemasan." target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-wa" style="justify-content: center; width: 100%;">
+        <span>WhatsApp (0811-2886-2016)</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         Page Header
+         ======================================================================== -->
+    <section style="padding: 60px 0 36px; background: #FAF9F6; border-bottom: 1px solid var(--border-card);">
+      <div class="site-container">
+        <span style="display: inline-block; font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: #EAEAE6; padding: 4px 12px; border-radius: 9999px; margin-bottom: 12px;">Kontak & Penawaran</span>
+        <h1 style="font-size: clamp(32px, 4vw, 46px); font-weight: 800; line-height: 1.15; max-width: 860px; margin-bottom: 14px;">
+          Konsultasikan Kebutuhan Cetak Kemasan Anda
+        </h1>
+        <p style="font-size: 15px; color: var(--text-body); max-width: 760px; line-height: 1.65;">
+          Tim teknis dan customer service <strong>boxaja.id</strong> siap membantu perhitungan harga cepat, pemilihan jenis material, hingga pengiriman sampel fisik.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Contact Cards (4 Columns)
+         ======================================================================== -->
+    <section style="padding: 48px 0 32px;">
+      <div class="site-container">
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px;">
+          <!-- Card 1: WA -->
+          <div class="contact-info-card">
+            <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(37,211,102,0.12); color: #25D366; display: flex; align-items: center; justify-content: center;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.947 3.01.947 3.181 0 5.767-2.586 5.767-5.766 0-3.181-2.586-5.767-5.767-5.767zm0 10.378c-.917 0-1.785-.279-2.529-.77l-.181-.11-1.637.429.437-1.597-.123-.195c-.537-.852-.821-1.783-.821-2.737 0-2.817 2.293-5.11 5.11-5.11 2.817 0 5.11 2.293 5.11 5.11 0 2.817-2.293 5.11-5.11 5.11z"/></svg>
+            </div>
+            <h4 style="font-size: 15px; font-weight: 700;">WhatsApp CS</h4>
+            <p style="font-size: 13px; color: var(--text-muted);">Respon cepat hitungan menit</p>
+            <a href="https://wa.me/6281128862016" target="_blank" rel="noopener noreferrer" style="font-weight: 700; color: #25D366; font-size: 14px;">0811-2886-2016 &rarr;</a>
+          </div>
+
+          <!-- Card 2: Email -->
+          <div class="contact-info-card">
+            <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(20,20,22,0.06); color: var(--text-main); display: flex; align-items: center; justify-content: center;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            </div>
+            <h4 style="font-size: 15px; font-weight: 700;">Email Pengadaan</h4>
+            <p style="font-size: 13px; color: var(--text-muted);">Untuk PO & penawaran tender</p>
+            <a href="mailto:order@boxaja.id" style="font-weight: 700; color: var(--text-main); font-size: 13.5px;">order@boxaja.id &rarr;</a>
+          </div>
+
+          <!-- Card 3: Hours -->
+          <div class="contact-info-card">
+            <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(20,20,22,0.06); color: var(--text-main); display: flex; align-items: center; justify-content: center;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <h4 style="font-size: 15px; font-weight: 700;">Jam Operasional</h4>
+            <p style="font-size: 13px; color: var(--text-muted);">Senin - Sabtu (08.00 - 18.00)</p>
+            <span style="font-size: 12.5px; font-weight: 600; color: #059669;">WhatsApp Siap 24/7</span>
+          </div>
+
+          <!-- Card 4: Location -->
+          <div class="contact-info-card">
+            <div style="width: 36px; height: 36px; border-radius: 10px; background: rgba(20,20,22,0.06); color: var(--text-main); display: flex; align-items: center; justify-content: center;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            </div>
+            <h4 style="font-size: 15px; font-weight: 700;">Pabrik & Workshop</h4>
+            <p style="font-size: 13px; color: var(--text-muted);">Kawasan Percetakan Industri</p>
+            <span style="font-size: 12.5px; font-weight: 600; color: var(--text-main);">Indonesia</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Quotation Form Section (Matches Screenshot Section 9)
+         ======================================================================== -->
+    <section style="padding: 32px 0 64px;">
+      <div class="site-container">
+        <div class="quote-card">
+          <div class="quote-card-header">
+            <h2 class="quote-title">Send your project and get minimum price</h2>
+            <p class="quote-subtitle">
+              Lengkapi informasi kebutuhan cetak Anda di bawah ini untuk menerima penawaran harga produsen langsung via WhatsApp resmi <strong>boxaja.id (0811-2886-2016)</strong>.
+            </p>
+          </div>
+
+          <form id="projectQuoteForm">
+            <!-- 4 Columns Row 1 matching screenshot -->
+            <div class="quote-form-row-1">
+              <div class="form-group">
+                <label for="quoteName" class="form-label">Your Name</label>
+                <input type="text" id="quoteName" class="form-control" placeholder="Nama Anda" required>
+              </div>
+
+              <div class="form-group">
+                <label for="quotePhone" class="form-label">Phone / WhatsApp</label>
+                <input type="tel" id="quotePhone" class="form-control" placeholder="Nomor WhatsApp aktif" required>
+              </div>
+
+              <div class="form-group">
+                <label for="quoteProduct" class="form-label">Product Type</label>
+                <select id="quoteProduct" class="form-control" required>
+                  <option value="Box Packaging (Hardbox / Corrugated / Foodgrade)">Box Packaging</option>
+                  <option value="Paper Bag (Kraft / Art Carton)">Paper Bag</option>
+                  <option value="Brosur & Flyer Promosi">Brosur & Flyer Promosi</option>
+                  <option value="Kalender Meja / Kalender Dinding">Kalender Meja / Dinding</option>
+                  <option value="Custom Offset Printing Lainnya">Custom Offset Printing Lainnya</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="quoteQty" class="form-label">Estimated Quantity</label>
+                <input type="text" id="quoteQty" class="form-control" placeholder="e.g. 500 pcs / 1.000 pcs" required>
+              </div>
+            </div>
+
+            <!-- Row 2: Message -->
+            <div class="quote-form-row-2">
+              <div class="form-group">
+                <label for="quoteMessage" class="form-label">Message & Detail Spesifikasi (Ukuran PxLxT, Bahan, Finishing)</label>
+                <textarea id="quoteMessage" class="form-control" placeholder="Jelaskan kebutuhan ukuran, pilihan bahan, dan finishing..."></textarea>
+              </div>
+            </div>
+
+            <!-- Row 3: Action Button -->
+            <div class="form-actions-row">
+              <div class="quote-wa-note">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="#25D366"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.947 3.01.947 3.181 0 5.767-2.586 5.767-5.766 0-3.181-2.586-5.767-5.767-5.767zm0 10.378c-.917 0-1.785-.279-2.529-.77l-.181-.11-1.637.429.437-1.597-.123-.195c-.537-.852-.821-1.783-.821-2.737 0-2.817 2.293-5.11 5.11-5.11 2.817 0 5.11 2.293 5.11 5.11 0 2.817-2.293 5.11-5.11 5.11z"/></svg>
+                <span>Terhubung langsung ke WhatsApp <strong>wa.me/6281128862016</strong></span>
+              </div>
+
+              <button type="submit" class="btn-pill btn-pill-dark">
+                <span>Send project</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         FAQ Section
+         ======================================================================== -->
+    <section style="padding: 16px 0 80px;">
+      <div class="site-container">
+        <div style="margin-bottom: 32px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
+          <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: #EAEAE6; padding: 4px 10px; border-radius: 9999px;">Frequently Asked Questions</span>
+          <h2 style="font-size: 28px; font-weight: 800; margin-top: 6px;">Pertanyaan yang Sering Diajukan</h2>
+        </div>
+
+        <div style="max-width: 820px; margin: 0 auto;">
+          <div class="faq-item active">
+            <div class="faq-q">
+              <span>Berapa minimal order (MOQ) cetak kemasan di boxaja.id?</span>
+              <span class="faq-toggle-icon">&#9662;</span>
+            </div>
+            <div class="faq-a" style="display: block;">
+              Minimal order sangat fleksibel! Untuk Hardbox mulai dari 100 pcs, Corrugated Box 300 pcs, Food Grade Box & Paper Bag 500 pcs, Brosur 500 lembar, dan Kalender 100 pcs. Semakin besar kuantitas, harga satuan per pcs akan jauh lebih murah.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <span>Apakah saya bisa dibantu pembuatan pola pisau (die-cut) dan mockup desain?</span>
+              <span class="faq-toggle-icon">&#9662;</span>
+            </div>
+            <div class="faq-a">
+              Tentu saja! Tim pra-cetak boxaja.id siap membantu membuatkan layout pola pisau pond (die-cut template) sesuai ukuran produk Anda secara gratis, serta menyimulasikan mockup 3D digital sebelum naik cetak massal.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <span>Bagaimana proses proofing dan sampel sebelum produksi massal?</span>
+              <span class="faq-toggle-icon">&#9662;</span>
+            </div>
+            <div class="faq-a">
+              Kami menyediakan proofing digital resolusi tinggi untuk validasi tata letak dan teks. Untuk pesanan partai besar (corporate order), kami juga dapat mengirimkan sampel fisik cetak / dummy polos untuk memastikan presisi folding sebelum mesin cetak massal dijalankan.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <span>Berapa lama estimasi waktu pengerjaan produksi?</span>
+              <span class="faq-toggle-icon">&#9662;</span>
+            </div>
+            <div class="faq-a">
+              Rata-rata waktu pengerjaan adalah 5 hingga 10 hari kerja setelah approval desain dan DP diterima. Untuk pesanan express / deadline mendesak, silakan konfirmasikan dengan tim CS WhatsApp kami untuk prioritas antrean mesin.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-q">
+              <span>Apakah melayani pengiriman ke luar kota dan luar pulau?</span>
+              <span class="faq-toggle-icon">&#9662;</span>
+            </div>
+            <div class="faq-a">
+              Ya, boxaja.id melayani pengiriman ke seluruh Nusantara. Kami bermitra dengan kargo darat, laut, dan udara terpercaya (seperti Baraka Sarana, Dakota, JNE Trucking, KALOG, Indah Cargo) dengan packing kayu/plastik anti-air aman.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="site-logo">
+            <div class="logo-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+            </div>
+            <span>boxaja<span class="logo-id">.id</span></span>
+          </a>
+          <p class="footer-desc">
+            boxaja.id — Spesialis kemasan Box, Paper Bag, Brosur, Kalender, dan percetakan offset berkualitas tinggi dengan harga produsen langsung.
+          </p>
+          <div class="footer-contact-info">
+            <p>📍 Kawasan Industri Percetakan & Packaging, Indonesia</p>
+            <p><a href="https://wa.me/6281128862016" class="footer-contact-link">📱 WhatsApp: 0811-2886-2016</a></p>
+            <p>✉️ Email: order@boxaja.id</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Products</h4>
+          <ul class="footer-links-list">
+            <li><a href="products.html#box">Box Packaging</a></li>
+            <li><a href="products.html#paperbag">Paper Bag</a></li>
+            <li><a href="products.html#brosur">Brosur & Flyer</a></li>
+            <li><a href="products.html#kalender">Kalender Meja</a></li>
+            <li><a href="products.html#kalender">Kalender Dinding</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation & Info</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="portfolio.html">Portofolio Klien</a></li>
+            <li><a href="pricing.html">Kalkulator Harga</a></li>
+            <li><a href="contact.html">Kontak & Alamat Pabrik</a></li>
+            <li><a href="https://wa.me/6281128862016" target="_blank" rel="noopener noreferrer">WhatsApp: 0811-2886-2016</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>© 2026 boxaja.id. All rights reserved. • Developed by <strong>BENCHCODE™</strong></p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <span>|</span>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/6281128862016?text=Halo%20boxaja.id,%20saya%20ingin%20konsultasi%20langsung." target="_blank" rel="noopener noreferrer" class="floating-wa" title="Chat WhatsApp Customer Service boxaja.id">
+    <div class="floating-wa-pulse"></div>
+    <div class="floating-wa-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.947 3.01.947 3.181 0 5.767-2.586 5.767-5.766 0-3.181-2.586-5.767-5.767-5.767zm0 10.378c-.917 0-1.785-.279-2.529-.77l-.181-.11-1.637.429.437-1.597-.123-.195c-.537-.852-.821-1.783-.821-2.737 0-2.817 2.293-5.11 5.11-5.11 2.817 0 5.11 2.293 5.11 5.11 0 2.817-2.293 5.11-5.11 5.11z"/></svg>
+    </div>
+    <span>WhatsApp 0811-2886-2016</span>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script>
+    // FAQ Accordion Toggle
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.addEventListener('click', () => {
+          const wasActive = item.classList.contains('active');
+          document.querySelectorAll('.faq-item').forEach(i => {
+            i.classList.remove('active');
+            const ans = i.querySelector('.faq-a');
+            if (ans) ans.style.display = 'none';
+          });
+          if (!wasActive) {
+            item.classList.add('active');
+            const ans = item.querySelector('.faq-a');
+            if (ans) ans.style.display = 'block';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

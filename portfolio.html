@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Hasil Cetak — boxaja.id | Galeri Kemasan Box, Paper Bag, Brosur & Kalender</title>
+  
+  <meta name="description" content="Lihat portofolio dan hasil cetak nyata kemasan Box, Paper Bag, Brosur, Kalender oleh boxaja.id untuk brand ternama di Indonesia. Hubungi WA 0811-2886-2016.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23141416'/><path d='M28 36L50 24L72 36L50 48L28 36Z' fill='%23FFFFFF'/><path d='M28 42L50 54V76L28 64V42Z' fill='%23D4D4D8'/><path d='M72 42L50 54V76L72 64V42Z' fill='%23A1A1AA'/></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .gallery-item {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      height: 380px;
+      background: #ECECE8;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .gallery-item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.03);
+    }
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0) 40%, rgba(0,0,0,0.7) 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 24px;
+      color: #FFFFFF;
+    }
+    .gallery-tag {
+      display: inline-block;
+      align-self: flex-start;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(6px);
+      padding: 3px 10px;
+      border-radius: 9999px;
+      margin-bottom: 6px;
+    }
+    .gallery-title {
+      font-size: 19px;
+      font-weight: 700;
+      color: #FFFFFF;
+      margin-bottom: 3px;
+    }
+    .gallery-desc {
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       Header (Navbar)
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="site-container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="site-logo" title="boxaja.id">
+          <div class="logo-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <span>boxaja<span class="logo-id">.id</span></span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+          <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="https://wa.me/6281128862016?text=Halo%20boxaja.id,%20saya%20ingin%20konsultasi%20portofolio." target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-outline">
+            <span>Get Started</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+
+          <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <ul class="mobile-drawer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products & Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="pricing.html">Pricing Calculator</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 24px;">
+      <a href="https://wa.me/6281128862016?text=Halo%20boxaja.id,%20saya%20ingin%20konsultasi%20cetak%20kemasan." target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-wa" style="justify-content: center; width: 100%;">
+        <span>WhatsApp (0811-2886-2016)</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         Page Header
+         ======================================================================== -->
+    <section style="padding: 60px 0 36px; background: #FAF9F6; border-bottom: 1px solid var(--border-card);">
+      <div class="site-container">
+        <span style="display: inline-block; font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: #EAEAE6; padding: 4px 12px; border-radius: 9999px; margin-bottom: 12px;">Portofolio & Karya Klien</span>
+        <h1 style="font-size: clamp(32px, 4vw, 46px); font-weight: 800; line-height: 1.15; max-width: 860px; margin-bottom: 14px;">
+          Explore Our Excellence Printing Works
+        </h1>
+        <p style="font-size: 15px; color: var(--text-body); max-width: 760px; line-height: 1.65;">
+          Setiap proyek kemasan yang kami tangani adalah kolaborasi presisi antara desain dan teknologi cetak. Jelajahi galeri karya riil kami untuk berbagai sektor industri di Indonesia.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Filter Tabs & Gallery Grid
+         ======================================================================== -->
+    <section style="padding: 56px 0 80px;">
+      <div class="site-container">
+        <div class="filter-tabs-row" id="portfolioTabs" style="margin-bottom: 34px;">
+          <button class="filter-tab active" data-filter="all">All Works</button>
+          <button class="filter-tab" data-filter="box">Box Packaging</button>
+          <button class="filter-tab" data-filter="paperbag">Paper Bag</button>
+          <button class="filter-tab" data-filter="brosur">Brosur & Flyer</button>
+          <button class="filter-tab" data-filter="kalender">Kalender</button>
+          <button class="filter-tab" data-filter="offset">Offset & Finishing</button>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px;" id="portfolioGalleryGrid">
+          
+          <!-- Item 1: Skincare Box -->
+          <div class="gallery-item" data-cat="box" onclick="openProductWhatsAppInquiry('Luxury Skincare Rigid Box', 'Box Packaging')">
+            <img src="assets/images/portfolio-box-white.jpg" alt="Luxury Skincare Rigid Box" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Skincare & Beauty</span>
+              <h3 class="gallery-title">Luxury Skincare Rigid Box</h3>
+              <p class="gallery-desc">Bahan Greyboard kokoh dibalut Art Paper 150gr, finishing laminasi doff lembut dan hot foil emas presisi.</p>
+            </div>
+            <div class="portfolio-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+          </div>
+
+          <!-- Item 2: Bakery Mailer Box -->
+          <div class="gallery-item" data-cat="box" onclick="openProductWhatsAppInquiry('Artisan Bakery Mailer Box', 'Box Packaging')">
+            <img src="assets/images/portfolio-box-food.jpg" alt="Artisan Bakery Mailer Box" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Food & F&B</span>
+              <h3 class="gallery-title">Artisan Bakery Mailer Box</h3>
+              <p class="gallery-desc">Karton gelombang E-Flute foodgrade aman untuk kue pastry & hampers dengan cetak full color luar-dalam.</p>
+            </div>
+            <div class="portfolio-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+          </div>
+
+          <!-- Item 3: Boutique Paper Bag -->
+          <div class="gallery-item" data-cat="paperbag" onclick="openProductWhatsAppInquiry('Boutique Kraft Paper Bag', 'Paper Bag')">
+            <img src="assets/images/portfolio-paperbag.jpg" alt="Boutique Kraft Paper Bag" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Fashion & Retail</span>
+              <h3 class="gallery-title">Boutique Kraft Paper Bag</h3>
+              <p class="gallery-desc">Paper bag kraft ramah lingkungan dengan pegangan tali kur rajut tebal dan cetak logo solid tahan gesek.</p>
+            </div>
+            <div class="portfolio-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+          </div>
+
+          <!-- Item 4: Luxury Shopping Bag -->
+          <div class="gallery-item" data-cat="paperbag" onclick="openProductWhatsAppInquiry('Art Carton Shopping Bag', 'Paper Bag')">
+            <img src="assets/images/service-paperbag.jpg" alt="Art Carton Shopping Bag" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Luxury Brand</span>
+              <h3 class="gallery-title">Art Carton Boutique Shopping Bag</h3>
+              <p class="gallery-desc">Art Carton 260gr dengan laminasi doff, eyelet mata ayam, dan tali pita satin eksklusif.</p>
+            </div>
+            <div class="portfolio-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+          </div>
+
+          <!-- Item 5: Trifold Brochure -->
+          <div class="gallery-item" data-cat="brosur" onclick="openProductWhatsAppInquiry('Corporate Trifold Brochure', 'Brosur')">
+            <img src="assets/images/portfolio-brochure.jpg" alt="Corporate Trifold Brochure" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Corporate & Event</span>
+              <h3 class="gallery-title">Corporate Trifold Brochure</h3>
+              <p class="gallery-desc">Cetak Art Paper 210gsm 2 sisi beresolusi tajam dengan lipatan rapi dan warna solid tanpa retak pada tekukan.</p>
+            </div>
+            <div class="portfolio-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+          </div>
+
+          <!-- Item 6: Executive Desk Calendar -->
+          <div class="gallery-item" data-cat="kalender" onclick="openProductWhatsAppInquiry('Executive Desk Calendar', 'Kalender')">
+            <img src="assets/images/portfolio-calendar.jpg" alt="Executive Desk Calendar" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Office & Souvenir</span>
+              <h3 class="gallery-title">Executive Desk Calendar 2026</h3>
+              <p class="gallery-desc">Kalender meja dudukan hardboard lapis linen hitam, spiral kawat putih kokoh, dan aksen Spot UV pada tanggal penting.</p>
+            </div>
+            <div class="portfolio-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+          </div>
+
+          <!-- Item 7: Holographic Cosmetic Box -->
+          <div class="gallery-item" data-cat="offset" onclick="openProductWhatsAppInquiry('Custom Holographic Cosmetic Box', 'Offset')">
+            <img src="assets/images/service-box.jpg" alt="Custom Holographic Cosmetic Box" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Finishing Khusus</span>
+              <h3 class="gallery-title">Holographic & Spot UV Die-Cut Box</h3>
+              <p class="gallery-desc">Kertas Ivory 350gr dengan laminasi hologram pelangi, Spot UV timbul pada logo, dan pisau pond presisi.</p>
+            </div>
+            <div class="portfolio-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+          </div>
+
+          <!-- Item 8: Wall Calendar -->
+          <div class="gallery-item" data-cat="kalender" onclick="openProductWhatsAppInquiry('Corporate Wall Calendar', 'Kalender')">
+            <img src="assets/images/service-calendar.jpg" alt="Corporate Wall Calendar" loading="lazy">
+            <div class="gallery-overlay">
+              <span class="gallery-tag">Corporate Branding</span>
+              <h3 class="gallery-title">Premium Wall Calendar Klep Seng</h3>
+              <p class="gallery-desc">Ukuran jumbo 46x64 cm isi 12 lembar Art Paper tebal dengan finishing jepit kaleng anti karat.</p>
+            </div>
+            <div class="portfolio-arrow"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         CTA Banner
+         ======================================================================== -->
+    <section style="padding: 0 0 80px;">
+      <div class="site-container">
+        <div style="background: var(--text-main); color: #FFFFFF; border-radius: var(--radius-xl); padding: 48px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+          <div>
+            <h2 style="color: #FFFFFF; font-size: 28px; font-weight: 800; margin-bottom: 6px;">Tertarik Membuat Kemasan Seperti Ini?</h2>
+            <p style="color: #A0A5B1; font-size: 14px;">Kirimkan referensi foto ke WhatsApp kami untuk estimasi harga dan simulasi mockup 3D gratis.</p>
+          </div>
+          <a href="https://wa.me/6281128862016?text=Halo%20boxaja.id,%20saya%20tertarik%20dengan%20portofolio%20kemasan%20Anda." target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-wa">
+            <span>WhatsApp (0811-2886-2016)</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="site-logo">
+            <div class="logo-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+            </div>
+            <span>boxaja<span class="logo-id">.id</span></span>
+          </a>
+          <p class="footer-desc">
+            boxaja.id — Spesialis kemasan Box, Paper Bag, Brosur, Kalender, dan percetakan offset berkualitas tinggi dengan harga produsen langsung.
+          </p>
+          <div class="footer-contact-info">
+            <p>📍 Kawasan Industri Percetakan & Packaging, Indonesia</p>
+            <p><a href="https://wa.me/6281128862016" class="footer-contact-link">📱 WhatsApp: 0811-2886-2016</a></p>
+            <p>✉️ Email: order@boxaja.id</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Products</h4>
+          <ul class="footer-links-list">
+            <li><a href="products.html#box">Box Packaging</a></li>
+            <li><a href="products.html#paperbag">Paper Bag</a></li>
+            <li><a href="products.html#brosur">Brosur & Flyer</a></li>
+            <li><a href="products.html#kalender">Kalender Meja</a></li>
+            <li><a href="products.html#kalender">Kalender Dinding</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation & Info</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="portfolio.html">Portofolio Klien</a></li>
+            <li><a href="pricing.html">Kalkulator Harga</a></li>
+            <li><a href="contact.html">Kontak & Alamat Pabrik</a></li>
+            <li><a href="https://wa.me/6281128862016" target="_blank" rel="noopener noreferrer">WhatsApp: 0811-2886-2016</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>© 2026 boxaja.id. All rights reserved. • Developed by <strong>BENCHCODE™</strong></p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <span>|</span>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/6281128862016?text=Halo%20boxaja.id,%20saya%20ingin%20konsultasi%20portofolio." target="_blank" rel="noopener noreferrer" class="floating-wa" title="Chat WhatsApp Customer Service boxaja.id">
+    <div class="floating-wa-pulse"></div>
+    <div class="floating-wa-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.947 3.01.947 3.181 0 5.767-2.586 5.767-5.766 0-3.181-2.586-5.767-5.767-5.767zm0 10.378c-.917 0-1.785-.279-2.529-.77l-.181-.11-1.637.429.437-1.597-.123-.195c-.537-.852-.821-1.783-.821-2.737 0-2.817 2.293-5.11 5.11-5.11 2.817 0 5.11 2.293 5.11 5.11 0 2.817-2.293 5.11-5.11 5.11z"/></svg>
+    </div>
+    <span>WhatsApp 0811-2886-2016</span>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Portfolio Page Tab Filtering
+    document.addEventListener('DOMContentLoaded', () => {
+      const tabs = document.querySelectorAll('#portfolioTabs .filter-tab');
+      const items = document.querySelectorAll('#portfolioGalleryGrid .gallery-item');
+      
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          tabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          const filter = tab.getAttribute('data-filter');
+          
+          items.forEach(item => {
+            if (filter === 'all' || item.getAttribute('data-cat') === filter) {
+              item.style.display = 'block';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

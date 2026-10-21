@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kalkulator Harga & Panduan Bahan — boxaja.id | Cetak Kemasan Pabrik Langsung</title>
+  
+  <meta name="description" content="Simulasi estimasi harga cetak Box Packaging, Paper Bag, Brosur, Kalender transparan di boxaja.id. Hubungi WA 0811-2886-2016 untuk penawaran resmi.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%23141416'/><path d='M28 36L50 24L72 36L50 48L28 36Z' fill='%23FFFFFF'/><path d='M28 42L50 54V76L28 64V42Z' fill='%23D4D4D8'/><path d='M72 42L50 54V76L72 64V42Z' fill='%23A1A1AA'/></svg>">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .pricing-table-wrap {
+      overflow-x: auto;
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-sm);
+    }
+    .pricing-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+      font-size: 13.5px;
+    }
+    .pricing-table th, .pricing-table td {
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .pricing-table th {
+      background: #FAF9F6;
+      font-family: var(--font-heading);
+      font-weight: 700;
+      color: var(--text-main);
+    }
+    .pricing-table tr:last-child td {
+      border-bottom: none;
+    }
+    .pricing-table tr:hover td {
+      background: #FAF9F6;
+    }
+    .guide-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-card);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========================================================================
+       Header (Navbar)
+       ======================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="site-container">
+      <div class="nav-wrapper">
+        <a href="index.html" class="site-logo" title="boxaja.id">
+          <div class="logo-badge">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
+            </svg>
+          </div>
+          <span>boxaja<span class="logo-id">.id</span></span>
+        </a>
+
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+          <li><a href="pricing.html" class="nav-link active">Pricing</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="https://wa.me/6281128862016?text=Halo%20boxaja.id,%20saya%20ingin%20konsultasi%20penawaran%20harga." target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-outline">
+            <span>Get Started</span>
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+
+          <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <ul class="mobile-drawer-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products & Services</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="pricing.html">Pricing Calculator</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+
+    <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 24px;">
+      <a href="https://wa.me/6281128862016?text=Halo%20boxaja.id,%20saya%20ingin%20konsultasi%20cetak%20kemasan." target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-wa" style="justify-content: center; width: 100%;">
+        <span>WhatsApp (0811-2886-2016)</span>
+      </a>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========================================================================
+         Page Header
+         ======================================================================== -->
+    <section style="padding: 60px 0 36px; background: #FAF9F6; border-bottom: 1px solid var(--border-card);">
+      <div class="site-container">
+        <span style="display: inline-block; font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: #EAEAE6; padding: 4px 12px; border-radius: 9999px; margin-bottom: 12px;">Transparan & Harga Pabrik</span>
+        <h1 style="font-size: clamp(32px, 4vw, 46px); font-weight: 800; line-height: 1.15; max-width: 860px; margin-bottom: 14px;">
+          Kalkulator Simulasi Harga & Panduan Spesifikasi Cetak
+        </h1>
+        <p style="font-size: 15px; color: var(--text-body); max-width: 760px; line-height: 1.65;">
+          Perkirakan anggaran kebutuhan kemasan produk Anda secara langsung, transparan, dan dapatkan harga grosir terbaik tanpa biaya tersembunyi.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Interactive Live Price Calculator Section
+         ======================================================================== -->
+    <section style="padding: 56px 0 72px;">
+      <div class="site-container">
+        <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 40px; align-items: flex-start;">
+          
+          <!-- Calculator Form Controls -->
+          <div style="background: #FFFFFF; border: 1px solid var(--border-card); border-radius: var(--radius-xl); padding: 36px; box-shadow: var(--shadow-sm);">
+            <div style="margin-bottom: 24px;">
+              <h2 style="font-size: 22px; font-weight: 800; margin-bottom: 4px;">Pilih Spesifikasi Kemasan</h2>
+              <p style="font-size: 13.5px; color: var(--text-muted);">Ubah pilihan di bawah untuk melihat kalkulasi harga real-time.</p>
+            </div>
+
+            <form id="calcPageForm" onsubmit="event.preventDefault();">
+              <div style="display: flex; flex-direction: column; gap: 18px;">
+                <!-- Product -->
+                <div class="form-group">
+                  <label for="pageCalcProduct" class="form-label">1. Kategori Produk *</label>
+                  <select id="pageCalcProduct" class="form-control">
+                    <option value="box-food">Box Makanan / Snack (Ivory Foodgrade)</option>
+                    <option value="box-corrugated" selected>Box Mailer Corrugated E-Flute</option>
+                    <option value="box-hardbox">Hardbox Eksklusif (Rigid Box Magnetik)</option>
+                    <option value="paperbag-kraft">Paper Bag Kraft Coklat / Putih</option>
+                    <option value="paperbag-artcarton">Paper Bag Art Carton Tebal</option>
+                    <option value="brosur">Brosur Lipat / Flyer Art Paper</option>
+                    <option value="kalender-meja">Kalender Meja Spiral Dudukan Linen</option>
+                    <option value="kalender-dinding">Kalender Dinding Spiral</option>
+                  </select>
+                </div>
+
+                <!-- Material Tier -->
+                <div class="form-group">
+                  <label for="pageCalcMaterial" class="form-label">2. Kualitas Bahan *</label>
+                  <select id="pageCalcMaterial" class="form-control">
+                    <option value="standard" selected>Standard (Ekonomis, Rapi & Ringan)</option>
+                    <option value="premium">Premium (Lebih Tebal, Kokoh & Solid)</option>
+                    <option value="exclusive">Exclusive High-Grade (Foodgrade Certified / Hard Cover)</option>
+                  </select>
+                </div>
+
+                <!-- Finishing Option -->
+                <div class="form-group">
+                  <label for="pageCalcFinishing" class="form-label">3. Finishing Tambahan *</label>
+                  <select id="pageCalcFinishing" class="form-control">
+                    <option value="none" selected>Tanpa Finishing Khusus (Standar Varnish)</option>
+                    <option value="doff">Laminasi Doff Elegan (Matte)</option>
+                    <option value="glossy">Laminasi Glossy Mengkilap</option>
+                    <option value="spot-uv">Laminasi Doff + Spot UV Kilap pada Logo</option>
+                    <option value="hot-foil">Hot Stamping Foil Emas / Silver</option>
+                    <option value="combo">Paket Komplit: Doff + Spot UV + Foil Emas</option>
+                  </select>
+                </div>
+
+                <!-- Quantity -->
+                <div class="form-group">
+                  <label for="pageCalcQty" class="form-label">4. Jumlah Pemesanan (Pcs / Lembar) *</label>
+                  <input type="number" id="pageCalcQty" class="form-control" value="1000" min="100" step="100">
+                  <span style="font-size: 12px; color: var(--text-muted);">Makin banyak jumlah pesanan, biaya cetak per satuan pcs semakin hemat drastis.</span>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <!-- Calculation Summary & Action Box -->
+          <div style="background: var(--bg-card-subtle); border: 1px solid var(--border-card); border-radius: var(--radius-xl); padding: 36px; position: sticky; top: 100px;">
+            <span style="font-size: 11.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: #FFFFFF; padding: 3px 10px; border-radius: 9999px;">Hasil Simulasi Biaya</span>
+            
+            <div style="margin: 20px 0 24px; padding: 24px; background: #FFFFFF; border: 1px dashed #D3D3CB; border-radius: var(--radius-lg); text-align: center;">
+              <span style="font-size: 12px; font-weight: 600; color: var(--text-muted); text-transform: uppercase;">Perkiraan Total Investasi:</span>
+              <div style="font-family: var(--font-heading); font-size: 32px; font-weight: 800; color: var(--text-main); margin-top: 4px;" id="pageCalcTotal">Rp 4.095.000</div>
+              <div style="font-size: 13px; color: var(--text-muted); margin-top: 4px;" id="pageCalcUnit">± Rp 4.095 / pcs (Estimasi 1.000 pcs)</div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 10px; font-size: 13px; color: var(--text-muted); margin-bottom: 24px;">
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Gratis Bantuan Setting File Pisau Pond</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Gratis Digital Mockup 3D Approval</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 8px;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="#25D366"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+                <span>Jaminan Kualitas Ulang Jika Cacat Produksi</span>
+              </div>
+            </div>
+
+            <button type="button" id="pageOrderCalcBtn" class="btn-pill btn-pill-wa" style="justify-content: center; width: 100%; padding: 14px 20px; font-size: 14px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.947 3.01.947 3.181 0 5.767-2.586 5.767-5.766 0-3.181-2.586-5.767-5.767-5.767zm0 10.378c-.917 0-1.785-.279-2.529-.77l-.181-.11-1.637.429.437-1.597-.123-.195c-.537-.852-.821-1.783-.821-2.737 0-2.817 2.293-5.11 5.11-5.11 2.817 0 5.11 2.293 5.11 5.11 0 2.817-2.293 5.11-5.11 5.11z"/></svg>
+              <span>Kirim Hasil Hitungan ke WhatsApp</span>
+            </button>
+            <p style="text-align: center; font-size: 11.5px; color: var(--text-muted); margin-top: 10px;">*Harga estimasi dapat bervariasi sesuai dimensi ukuran spesifik.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Wholesale Price Reference Table
+         ======================================================================== -->
+    <section style="padding: 40px 0 80px; background: #FFFFFF; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light);">
+      <div class="site-container">
+        <div style="margin-bottom: 32px;">
+          <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: #EAEAE6; padding: 4px 10px; border-radius: 9999px;">Tabel Referensi Grosir</span>
+          <h2 style="font-size: 28px; font-weight: 800; margin-top: 6px;">Perbandingan Harga Oplag Cetak</h2>
+          <p style="font-size: 14px; color: var(--text-muted); margin-top: 4px;">Simulasi perbandingan harga satuan (per pcs) berdasarkan jumlah cetak.</p>
+        </div>
+
+        <div class="pricing-table-wrap">
+          <table class="pricing-table">
+            <thead>
+              <tr>
+                <th>Produk & Spesifikasi</th>
+                <th>500 pcs</th>
+                <th>1.000 pcs</th>
+                <th>2.500 pcs</th>
+                <th>5.000+ pcs</th>
+                <th>Aksi</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Box Mailer Corrugated</strong><br><span style="color: var(--text-muted); font-size: 12px;">E-Flute Kraft + Sablon 1 Warna</span></td>
+                <td>± Rp 4.500</td>
+                <td>± Rp 3.900</td>
+                <td>± Rp 3.300</td>
+                <td><strong style="color: #059669;">± Rp 2.800</strong></td>
+                <td><a href="https://wa.me/6281128862016?text=Halo,%20saya%20tertarik%20Box%20Mailer%20Corrugated." target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-outline" style="padding: 5px 12px; font-size: 12px;">Pesan</a></td>
+              </tr>
+              <tr>
+                <td><strong>Box Foodgrade Snack/Cake</strong><br><span style="color: var(--text-muted); font-size: 12px;">Ivory 300gr + PE Food Safe</span></td>
+                <td>± Rp 2.200</td>
+                <td>± Rp 1.700</td>
+                <td>± Rp 1.450</td>
+                <td><strong style="color: #059669;">± Rp 1.150</strong></td>
+                <td><a href="https://wa.me/6281128862016?text=Halo,%20saya%20tertarik%20Box%20Foodgrade." target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-outline" style="padding: 5px 12px; font-size: 12px;">Pesan</a></td>
+              </tr>
+              <tr>
+                <td><strong>Hardbox Rigid Box Mewah</strong><br><span style="color: var(--text-muted); font-size: 12px;">Greyboard 30 + Foil Emas + Magnet</span></td>
+                <td>± Rp 22.000</td>
+                <td>± Rp 18.500</td>
+                <td>± Rp 16.000</td>
+                <td><strong style="color: #059669;">± Rp 14.000</strong></td>
+                <td><a href="https://wa.me/6281128862016?text=Halo,%20saya%20tertarik%20Hardbox%20Rigid%20Box." target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-outline" style="padding: 5px 12px; font-size: 12px;">Pesan</a></td>
+              </tr>
+              <tr>
+                <td><strong>Kraft Paper Bag Butik</strong><br><span style="color: var(--text-muted); font-size: 12px;">Kraft 150gr + Tali Kur Tebal</span></td>
+                <td>± Rp 2.600</td>
+                <td>± Rp 2.200</td>
+                <td>± Rp 1.850</td>
+                <td><strong style="color: #059669;">± Rp 1.500</strong></td>
+                <td><a href="https://wa.me/6281128862016?text=Halo,%20saya%20tertarik%20Kraft%20Paper%20Bag." target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-outline" style="padding: 5px 12px; font-size: 12px;">Pesan</a></td>
+              </tr>
+              <tr>
+                <td><strong>Brosur A4 Trifold (Lipat 3)</strong><br><span style="color: var(--text-muted); font-size: 12px;">Art Paper 150gr Full Color 2 Sisi</span></td>
+                <td>± Rp 950</td>
+                <td>± Rp 750</td>
+                <td>± Rp 580</td>
+                <td><strong style="color: #059669;">± Rp 420</strong></td>
+                <td><a href="https://wa.me/6281128862016?text=Halo,%20saya%20tertarik%20Brosur%20A4%20Trifold." target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-outline" style="padding: 5px 12px; font-size: 12px;">Pesan</a></td>
+              </tr>
+              <tr>
+                <td><strong>Kalender Meja Spiral Dudukan Linen</strong><br><span style="color: var(--text-muted); font-size: 12px;">7 Lembar Art Carton 260gr + Spiral</span></td>
+                <td>± Rp 17.500</td>
+                <td>± Rp 14.500</td>
+                <td>± Rp 12.800</td>
+                <td><strong style="color: #059669;">± Rp 11.200</strong></td>
+                <td><a href="https://wa.me/6281128862016?text=Halo,%20saya%20tertarik%20Kalender%20Meja%20Spiral." target="_blank" rel="noopener noreferrer" class="btn-pill btn-pill-outline" style="padding: 5px 12px; font-size: 12px;">Pesan</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         Material & Finishing Guide
+         ======================================================================== -->
+    <section style="padding: 64px 0 80px;">
+      <div class="site-container">
+        <div style="margin-bottom: 36px; text-align: center; max-width: 600px; margin-left: auto; margin-right: auto;">
+          <span style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; background: #EAEAE6; padding: 4px 10px; border-radius: 9999px;">Panduan Edukasi</span>
+          <h2 style="font-size: 30px; font-weight: 800; margin-top: 6px;">Panduan Memilih Bahan & Finishing</h2>
+          <p style="font-size: 14px; color: var(--text-muted); margin-top: 4px;">Pahami karakteristik kertas dan teknik finishing untuk kemasan terbaik produk Anda.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+          <!-- Guide 1 -->
+          <div class="guide-card">
+            <h3 style="font-size: 17px; font-weight: 700;">Kertas Ivory (Foodgrade)</h3>
+            <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.55;">
+              Permukaan luar putih halus mengkilap, bagian dalam putih doff. Sangat kuat, elegan, dan tersedia varian laminasi PE foodgrade yang aman untuk kontak makanan langsung.
+            </p>
+            <div style="font-size: 12px; font-weight: 600; color: var(--text-main);">Ideal: Kosmetik, Skincare, Donat, Cake, Medicine.</div>
+          </div>
+
+          <!-- Guide 2 -->
+          <div class="guide-card">
+            <h3 style="font-size: 17px; font-weight: 700;">Karton Corrugated E-Flute</h3>
+            <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.55;">
+              Karton dengan lapisan gelombang mikro (E-Flute setebal 1.5-2mm). Mampu menahan benturan dan tumpukan berat saat proses pengiriman kurir ekspedisi.
+            </p>
+            <div style="font-size: 12px; font-weight: 600; color: var(--text-main);">Ideal: Mailer Box Online Shop, Pakaian, Sepatu, Pizza.</div>
+          </div>
+
+          <!-- Guide 3 -->
+          <div class="guide-card">
+            <h3 style="font-size: 17px; font-weight: 700;">Kraft Paper (Coklat / Putih)</h3>
+            <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.55;">
+              Bahan berserat kayu alami yang ramah lingkungan (eco-friendly). Memberikan nuansa natural, vintage, dan estetik kekinian yang diminati konsumen modern.
+            </p>
+            <div style="font-size: 12px; font-weight: 600; color: var(--text-main);">Ideal: Shopping Bag Butik, Kopi, Souvenir, Snack Sehat.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       Footer
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <div class="footer-top-grid">
+        <div class="footer-brand-col">
+          <a href="index.html" class="site-logo">
+            <div class="logo-badge">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+            </div>
+            <span>boxaja<span class="logo-id">.id</span></span>
+          </a>
+          <p class="footer-desc">
+            boxaja.id — Spesialis kemasan Box, Paper Bag, Brosur, Kalender, dan percetakan offset berkualitas tinggi dengan harga produsen langsung.
+          </p>
+          <div class="footer-contact-info">
+            <p>📍 Kawasan Industri Percetakan & Packaging, Indonesia</p>
+            <p><a href="https://wa.me/6281128862016" class="footer-contact-link">📱 WhatsApp: 0811-2886-2016</a></p>
+            <p>✉️ Email: order@boxaja.id</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Products</h4>
+          <ul class="footer-links-list">
+            <li><a href="products.html#box">Box Packaging</a></li>
+            <li><a href="products.html#paperbag">Paper Bag</a></li>
+            <li><a href="products.html#brosur">Brosur & Flyer</a></li>
+            <li><a href="products.html#kalender">Kalender Meja</a></li>
+            <li><a href="products.html#kalender">Kalender Dinding</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-col-title">Navigation & Info</h4>
+          <ul class="footer-links-list">
+            <li><a href="about.html">Tentang Kami</a></li>
+            <li><a href="portfolio.html">Portofolio Klien</a></li>
+            <li><a href="pricing.html">Kalkulator Harga</a></li>
+            <li><a href="contact.html">Kontak & Alamat Pabrik</a></li>
+            <li><a href="https://wa.me/6281128862016" target="_blank" rel="noopener noreferrer">WhatsApp: 0811-2886-2016</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>© 2026 boxaja.id. All rights reserved. • Developed by <strong>BENCHCODE™</strong></p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <span>|</span>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a href="https://wa.me/6281128862016?text=Halo%20boxaja.id,%20saya%20ingin%20konsultasi%20harga%20cetak." target="_blank" rel="noopener noreferrer" class="floating-wa" title="Chat WhatsApp Customer Service boxaja.id">
+    <div class="floating-wa-pulse"></div>
+    <div class="floating-wa-icon">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.711 2.598 2.664-.698c.969.585 1.961.947 3.01.947 3.181 0 5.767-2.586 5.767-5.766 0-3.181-2.586-5.767-5.767-5.767zm0 10.378c-.917 0-1.785-.279-2.529-.77l-.181-.11-1.637.429.437-1.597-.123-.195c-.537-.852-.821-1.783-.821-2.737 0-2.817 2.293-5.11 5.11-5.11 2.817 0 5.11 2.293 5.11 5.11 0 2.817-2.293 5.11-5.11 5.11z"/></svg>
+    </div>
+    <span>WhatsApp 0811-2886-2016</span>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Live calculation script on Pricing Page
+    document.addEventListener('DOMContentLoaded', () => {
+      const prodSelect = document.getElementById('pageCalcProduct');
+      const matSelect = document.getElementById('pageCalcMaterial');
+      const finSelect = document.getElementById('pageCalcFinishing');
+      const qtyInput = document.getElementById('pageCalcQty');
+      const totalDisplay = document.getElementById('pageCalcTotal');
+      const unitDisplay = document.getElementById('pageCalcUnit');
+      const orderBtn = document.getElementById('pageOrderCalcBtn');
+
+      function calculatePageEstimate() {
+        const prod = prodSelect.value;
+        const mat = matSelect.value;
+        const fin = finSelect.value;
+        let qty = parseInt(qtyInput.value) || 500;
+        if (qty < 100) qty = 100;
+
+        let basePrice = 2500;
+        if (prod === 'box-hardbox') basePrice = 18500;
+        else if (prod === 'box-corrugated') basePrice = 4200;
+        else if (prod === 'box-food') basePrice = 1600;
+        else if (prod === 'paperbag-kraft') basePrice = 2200;
+        else if (prod === 'paperbag-artcarton') basePrice = 4800;
+        else if (prod === 'brosur') basePrice = 650;
+        else if (prod === 'kalender-meja') basePrice = 14500;
+        else if (prod === 'kalender-dinding') basePrice = 12000;
+
+        let matMultiplier = 1.0;
+        if (mat === 'premium') matMultiplier = 1.25;
+        else if (mat === 'exclusive') matMultiplier = 1.5;
+
+        let finishingAdd = 0;
+        if (fin === 'doff' || fin === 'glossy') finishingAdd = 350;
+        else if (fin === 'spot-uv') finishingAdd = 750;
+        else if (fin === 'hot-foil') finishingAdd = 1200;
+        else if (fin === 'combo') finishingAdd = 1800;
+
+        let qtyDiscount = 1.0;
+        if (qty >= 5000) qtyDiscount = 0.70;
+        else if (qty >= 2500) qtyDiscount = 0.80;
+        else if (qty >= 1000) qtyDiscount = 0.90;
+        else if (qty >= 500) qtyDiscount = 1.0;
+        else qtyDiscount = 1.35;
+
+        const unit = Math.round((basePrice * matMultiplier + finishingAdd) * qtyDiscount);
+        const total = unit * qty;
+
+        totalDisplay.textContent = formatRupiah(total);
+        unitDisplay.textContent = `± ${formatRupiah(unit)} / pcs (Estimasi ${qty.toLocaleString('id-ID')} pcs)`;
+      }
+
+      [prodSelect, matSelect, finSelect, qtyInput].forEach(elem => {
+        elem.addEventListener('change', calculatePageEstimate);
+        elem.addEventListener('input', calculatePageEstimate);
+      });
+
+      calculatePageEstimate();
+
+      orderBtn.addEventListener('click', () => {
+        const prodName = prodSelect.options[prodSelect.selectedIndex].text;
+        const matName = matSelect.options[matSelect.selectedIndex].text;
+        const finName = finSelect.options[finSelect.selectedIndex].text;
+        const qtyVal = qtyInput.value;
+        const totalVal = totalDisplay.textContent;
+        const unitVal = unitDisplay.textContent;
+
+        const msg = 
+`*KONSULTASI HARGA HALAMAN PRICING — boxaja.id*
+---------------------------------------
+📦 *Produk:* ${prodName}
+📄 *Bahan:* ${matName}
+✨ *Finishing:* ${finName}
+🔢 *Jumlah:* ${qtyVal} pcs
+💰 *Perkiraan Harga:* ${totalVal} (${unitVal})
+---------------------------------------
+Halo tim boxaja.id, saya ingin konfirmasi penawaran resmi untuk spesifikasi ini. Terima kasih!`;
+
+        const url = `https://wa.me/6281128862016?text=${encodeURIComponent(msg)}`;
+        window.open(url, '_blank');
+      });
+    });
+  </script>
+</body>
+</html>
